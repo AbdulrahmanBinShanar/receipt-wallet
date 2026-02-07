@@ -89,7 +89,7 @@ export default function MerchantAnalysisChart({
                                     backdropFilter: "blur(10px)",
                                 }}
                                 labelStyle={{ color: "#fff", fontWeight: "bold" }}
-                                formatter={(value: any, name: string) => {
+                                formatter={(value: any, name?: string) => {
                                     if (name === "totalSpending")
                                         return [`${Number(value).toFixed(2)} SAR`, locale === "ar" ? "الإجمالي" : "Total"];
                                     if (name === "visitCount")
@@ -150,7 +150,7 @@ export default function MerchantAnalysisChart({
                                     border: "1px solid rgba(255, 255, 255, 0.1)",
                                     borderRadius: "8px",
                                 }}
-                                formatter={(value: any, name: string, props: any) => {
+                                formatter={(value: any, name?: string, props?: any) => {
                                     if (name === "totalSpending")
                                         return [`${Number(value).toFixed(2)} SAR`, locale === "ar" ? "الإنفاق" : "Spending"];
                                     if (name === "visitCount")
