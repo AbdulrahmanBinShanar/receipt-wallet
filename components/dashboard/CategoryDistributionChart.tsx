@@ -80,7 +80,7 @@ export default function CategoryDistributionChart({
                                 outerRadius={100}
                                 paddingAngle={2}
                                 dataKey="amount"
-                                label={({ percentage }) => `${percentage}%`}
+                                label={(props: any) => `${props.percent ? (props.percent * 100).toFixed(0) : 0}%`}
                                 labelLine={false}
                             >
                                 {dataWithPercentage.map((entry, index) => (
